@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Param - Ansible-OraDB Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Param";
+        var mkdocs_page_input_path = "param.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Ansible-OraDB Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Ansible-OraDB Documentation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../backup/">Backup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../instances/">Instances</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../job/">Job</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Param</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#description">Description</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-added">Version Added</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#options">Options</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#author">Author</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-new-pfile">Create a New PFILE</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#modify-an-spfile">Modify an SPFILE</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#delete-a-pfile">Delete a PFILE</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#convert-pfile-to-spfile">Convert PFILE to SPFILE</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#return-values">Return Values</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../privilege/">Privilege</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../profile/">Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../restore/">Restore</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../role/">Role</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../schema/">Schema</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../shutdown/">Shutdown</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../startup/">Startup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tablespace/">Tablespace</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user/">User</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Ansible-OraDB Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Modules</li>
+      <li class="breadcrumb-item active">Param</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="ansible-module-gebz97oradbparam">Ansible Module: <code>gebz97.oradb.param</code></h1>
+<h2 id="description">Description</h2>
+<p>This module allows you to create, modify, delete, and convert Oracle PFILE and SPFILE configurations with validated parameters.</p>
+<h2 id="version-added">Version Added</h2>
+<ul>
+<li><code>1.0.0</code></li>
+</ul>
+<h2 id="options">Options</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+<th>Choices</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pfile</code></td>
+<td>Path to the PFILE to manage.</td>
+<td>No</td>
+<td><code>str</code></td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>spfile</code></td>
+<td>Path to the SPFILE to manage.</td>
+<td>No</td>
+<td><code>str</code></td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>sid</code></td>
+<td>The Oracle system identifier (SID).</td>
+<td>No</td>
+<td><code>str</code></td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>Desired state of the file (<code>present</code> or <code>absent</code>).</td>
+<td>No</td>
+<td><code>str</code></td>
+<td><code>present</code>, <code>absent</code></td>
+<td><code>present</code></td>
+</tr>
+<tr>
+<td><code>action</code></td>
+<td>Action to perform on the file (<code>create</code>, <code>modify</code>, <code>delete</code>, <code>convert</code>).</td>
+<td>Yes</td>
+<td><code>str</code></td>
+<td><code>create</code>, <code>modify</code>, <code>delete</code>, <code>convert</code></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>parameters</code></td>
+<td>Dictionary of PFILE/SPFILE parameters to manage.</td>
+<td>No</td>
+<td><code>dict</code></td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h2 id="author">Author</h2>
+<ul>
+<li>Gebz (@gebz97)</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<h3 id="create-a-new-pfile">Create a New PFILE</h3>
+<pre><code class="language-yaml">- name: Create a PFILE with parameters
+  gebz97.oradb.param:
+    pfile: /u01/app/oracle/dbs/init.ora
+    sid: ORCL
+    action: create
+    parameters:
+      db_cache_size: 104857600
+      sga_target: 209715200
+</code></pre>
+<h3 id="modify-an-spfile">Modify an SPFILE</h3>
+<pre><code class="language-yaml">- name: Modify SPFILE with new parameters
+  gebz97.oradb.param:
+    spfile: /u01/app/oracle/dbs/spfileORCL.ora
+    action: modify
+    parameters:
+      processes: 300
+</code></pre>
+<h3 id="delete-a-pfile">Delete a PFILE</h3>
+<pre><code class="language-yaml">- name: Delete an old PFILE
+  gebz97.oradb.param:
+    pfile: /u01/app/oracle/dbs/init.ora
+    action: delete
+</code></pre>
+<h3 id="convert-pfile-to-spfile">Convert PFILE to SPFILE</h3>
+<pre><code class="language-yaml">- name: Convert PFILE to SPFILE
+  gebz97.oradb.param:
+    pfile: /u01/app/oracle/dbs/init.ora
+    spfile: /u01/app/oracle/dbs/spfileORCL.ora
+    action: convert
+</code></pre>
+<h2 id="return-values">Return Values</h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+<th>Type</th>
+<th>Returned</th>
+<th>Sample</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>original_message</code></td>
+<td>The original parameters that were passed.</td>
+<td><code>dict</code></td>
+<td>always</td>
+<td><code>{"db_cache_size": 104857600, "sga_target": 209715200}</code></td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>The output message indicating the result of the action.</td>
+<td><code>str</code></td>
+<td>always</td>
+<td><code>"PFILE created successfully"</code></td>
+</tr>
+<tr>
+<td><code>changed</code></td>
+<td>Indicates if the module made any changes.</td>
+<td><code>bool</code></td>
+<td>always</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../job/" class="btn btn-neutral float-left" title="Job"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../privilege/" class="btn btn-neutral float-right" title="Privilege">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../job/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../privilege/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
